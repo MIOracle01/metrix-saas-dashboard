@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-bg: 250 250 251;
+  --color-surface: 255 255 255;
+  --color-border: 228 228 231;
+  --color-text: 24 24 27;
+  --color-text-muted: 113 113 122;
+  --color-accent: 79 70 229;
+  --color-accent-foreground: 255 255 255;
+  --color-positive: 22 163 74;
+  --color-negative: 220 38 38;
+}
+
+.dark {
+  --color-bg: 9 9 11;
+  --color-surface: 18 18 21;
+  --color-border: 39 39 42;
+  --color-text: 244 244 245;
+  --color-text-muted: 161 161 170;
+  --color-accent: 129 140 248;
+  --color-accent-foreground: 15 15 20;
+  --color-positive: 74 222 128;
+  --color-negative: 248 113 113;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-text));
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  border-color: rgb(var(--color-border));
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--color-border));
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
